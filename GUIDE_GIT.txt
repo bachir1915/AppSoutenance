@@ -1,0 +1,76 @@
+GUIDE GIT : FLUX DE TRAVAIL EN ÉQUIPE (CHRONOLOGIQUE)
+===================================================
+
+URL DU PROJET : https://github.com/bachir1915/AppSoutenance.git
+
+ÉTAPE 1 : CRÉATION ET PREMIER ENVOI (À faire par le responsable du projet)
+-------------------------------------------------------------------------
+1. Initialiser le projet localement :
+   git init
+
+2. Ajouter tous les fichiers :
+   git add .
+
+3. Enregistrer le premier état (commit) :
+   git commit -m "Initialisation du projet"
+
+4. Lier le dossier local à GitHub :
+   git remote add origin https://github.com/bachir1915/AppSoutenance.git
+
+5. Envoyer le projet sur GitHub :
+   git push -u https://github.com/bachir1915/AppSoutenance.git main
+
+
+ÉTAPE 2 : RÉCUPÉRATION DU PROJET (À faire par les membres de l'équipe)
+----------------------------------------------------------------------
+1. Télécharger le projet sur son propre ordinateur :
+   git clone https://github.com/bachir1915/AppSoutenance.git
+
+
+ÉTAPE 3 : CYCLE DE TRAVAIL QUOTIDIEN (Pour tout le monde)
+---------------------------------------------------------
+
+A. AVANT DE COMMENCER (Mettre à jour son code) :
+   git pull https://github.com/bachir1915/AppSoutenance.git main
+
+B. FAIRE VOS MODIFICATIONS :
+   (Modifiez vos fichiers dans VS Code ou votre éditeur)
+
+C. VÉRIFIER LES CHANGEMENTS :
+   git status
+
+D. ENREGISTRER VOS MODIFICATIONS :
+   git add .
+   git commit -m "Description claire de ce que vous avez changé"
+
+E. ENVOYER SUR GITHUB :
+   git push https://github.com/bachir1915/AppSoutenance.git main
+
+
+COMMANDES UTILES EN CAS DE BESOIN
+---------------------------------
+- Voir l'historique : git log
+- Annuler les modifs d'un fichier (non commitées) : git checkout -- [nom_du_fichier]
+- Voir qui a fait quoi : git blame [nom_du_fichier]
+
+SUPPRIMER UNE BRANCHE
+---------------------
+1. Supprimer une branche LOCALEMENT (sur votre PC) :
+   git branch -d [nom_de_la_branche]
+
+2. Supprimer une branche SUR GITHUB (à distance) :
+   git push https://github.com/bachir1915/AppSoutenance.git --delete [nom_de_la_branche]
+
+VIDER OU RÉINITIALISER LE CONTENU
+--------------------------------
+1. Supprimer TOUS les fichiers d'une branche (la vider) :
+   git rm -rf .
+   git commit -m "Suppression de tout le contenu"
+   git push https://github.com/bachir1915/AppSoutenance.git [votre_branche]
+
+2. Annuler vos changements non enregistrés (revenir au dernier commit) :
+   git reset --hard HEAD
+
+3. Réinitialiser votre branche pour qu'elle soit IDENTIQUE à "main" :
+   git reset --hard origin/main
+   (Attention : cela efface TOUT votre travail sur cette branche pour copier la branche main)
